@@ -15,9 +15,7 @@ def train_logistic_regression(X, y, lr=0.1, steps=1000):
     for _ in range(steps):
         # Linear output
         z = X @ w + b
-        
-        # 🔥 KEY FIX: clip z to avoid overflow
-        z = np.clip(z, -20, 20)
+        #z = np.clip(z, -20, 20)
         
         # Sigmoid
         p = _sigmoid(z)
